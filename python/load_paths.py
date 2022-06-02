@@ -48,13 +48,13 @@ def retrieveForYear(year):
             .get_bucket("irs-form-990") \
             .get_key("index_%i.json" % year) \
             .get_contents_as_string() \
-            .replace("\r", "")
+            .replace(b"\r", b"")
     j = json.loads(r)
   
     # The index comes back as a single JSON key-value pair whose value is
     # a JSON array of length one. Inside _that_ is an array of filings.
 
-    filings = j.values()[0]
+    filings = list(j.values())[0]
 
     if production:
         return filings

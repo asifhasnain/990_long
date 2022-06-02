@@ -52,7 +52,7 @@ def appendXml(row, conn):
     s3name = toS3(contents["object_id"])
     xml = conn.get_key(s3name) \
             .get_contents_as_string() \
-            .replace("\r", "")
+            .replace(b"\r", b"")
     contents["xml"] = xml
     return contents
 
