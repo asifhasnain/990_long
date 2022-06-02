@@ -2,6 +2,7 @@
 cd ~
 echo "***Installing packages."
 sudo yum -y install htop tmux git
+python -m pip install requests
 echo "*** Cloning 990_long."
 git clone https://github.com/asifhasnain/990_long
 echo "*** Cloning concordance."
