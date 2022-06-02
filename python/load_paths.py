@@ -31,9 +31,9 @@ args = parser.parse_known_args()[0]
 production = args.prod
 
 if args.prod:
-    print "Production mode is ON!"
+    print("Production mode is ON!")
 else:
-    print "Production mode is OFF. For test mode, I will retrieve %i records per year, starting with the year %i." % (args.test_count, args.earliest_year)
+    print("Production mode is OFF. For test mode, I will retrieve %i records per year, starting with the year %i." % (args.test_count, args.earliest_year))
 
 if args.timestamp:
     timestamp = datetime.datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d-%H-%M-%S')
@@ -95,4 +95,4 @@ sc.parallelize(years) \
                 col("LastUpdated").alias("updated")) \
         .write.parquet(outputPath)
 
-print "***Process complete."
+print("***Process complete.")

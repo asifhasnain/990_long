@@ -3,7 +3,7 @@ cd ~
 echo "***Installing packages."
 sudo yum -y install htop tmux git
 echo "*** Cloning 990_long."
-git clone https://github.com/CharityNavigator/990_long 
+git clone https://github.com/asifhasnain/990_long
 echo "*** Cloning concordance."
 git clone https://github.com/Nonprofit-Open-Data-Collective/irs-efile-master-concordance-file.git 
 echo "*** Copying concordance to 990_long."

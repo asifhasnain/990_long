@@ -84,4 +84,4 @@ input.rdd \
         .toDF() \
         .write.parquet(outputPath)
 
-print "***Process complete."
+print("***Process complete.")

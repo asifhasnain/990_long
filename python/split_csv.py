@@ -36,4 +36,4 @@ spark.read.parquet(args.input) \
         .write.partitionBy("variable") \
         .csv(outputPath, header=True)
 
-print "*** Process complete."
+print("*** Process complete.")

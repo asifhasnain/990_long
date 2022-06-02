@@ -36,4 +36,4 @@ spark.read.parquet(args.input) \
         .write.partitionBy("form", "part") \
         .parquet(outputPath)
 
-print "*** Process complete."
+print("*** Process complete.")

@@ -50,4 +50,4 @@ df.join(cc, "xpath", "left") \
         .write \
         .parquet(outputPath)
 
-print "*** Process complete."
+print("*** Process complete.")

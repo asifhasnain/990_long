@@ -114,4 +114,4 @@ spark.read.parquet(args.input) \
         .drop("element") \
         .write.parquet(outputPath)
 
-print "***Process complete."
+print("***Process complete.")
